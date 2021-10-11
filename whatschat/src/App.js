@@ -1,4 +1,5 @@
 import "./App.css";
+import ChatFeed from "./components/ChatFeed";
 import { ChatEngine } from "react-chat-engine";
 
 const userSecretValue = process.env.REACT_APP_SECRET;
@@ -11,6 +12,7 @@ const App = () => {
 			projectID={projectIDValue}
 			userName="danielMartinez"
 			userSecret={userSecretValue}
+			renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
 		/>
 	);
 };
